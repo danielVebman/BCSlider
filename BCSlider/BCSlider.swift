@@ -14,9 +14,10 @@ import UIKit
 class BCSlider: UIView {
     
     private let contentView = UIView()
-    private let curve = BCBellCurve()
-    private let label = BCLabel()
-    private let thumb = UIView()
+    
+    let curve = BCBellCurve()
+    let label = BCLabel()
+    let thumb = UIView()
     
     private var centerConstraints: (
         curve: Constraint?,
@@ -45,15 +46,6 @@ class BCSlider: UIView {
                 setNeedsDisplay()
                 valueChangedHandler?(value)
             }
-        }
-    }
-    
-    var labelText: String {
-        get {
-            return label.text ?? ""
-        }
-        set(text) {
-            label.text = text
         }
     }
     
@@ -153,7 +145,7 @@ class BCSlider: UIView {
     
 }
 
-private class BCLabel: UILabel {
+class BCLabel: UILabel {
     
     override var intrinsicContentSize: CGSize {
         let size = super.intrinsicContentSize
@@ -166,12 +158,13 @@ private class BCLabel: UILabel {
     
 }
 
-private class BCBellCurve: UIView {
+class BCBellCurve: UIView {
     
     init() {
         super.init(frame: .zero)
         layer.delegate = self
         backgroundColor = .clear
+        tintColor = .lightGray
     }
     
     required init?(coder: NSCoder) {
@@ -207,15 +200,8 @@ private class BCBellCurve: UIView {
         ctx.addLine(to: CGPoint(x: bounds.width, y: maxY))
         
         ctx.setLineWidth(1.5)
-        ctx.setStrokeColor(UIColor.lightGray.cgColor)
+        ctx.setStrokeColor(tintColor.cgColor)
         ctx.strokePath()
     }
     
-}
-
-enum BCIncrement {
-    /// Sticky points starting at 0 at incrementing
-    case fixed(CGFloat)
-    /// Sticky points at the given values
-    case arbitrary([CGFloat])
 }

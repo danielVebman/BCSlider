@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         let slider = BCSlider()
         slider.onValueChanged { value in
-            slider.labelText = "\(Int(value * 59) + 1) min"
+            slider.label.text = "\(Int(value * 59) + 1) min"
         }
         slider.value = 0.1
         alertView.addSubview(slider)
