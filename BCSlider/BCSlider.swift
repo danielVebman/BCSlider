@@ -34,6 +34,7 @@ class BCSlider: UIView {
     }
     
     private var valueChangedHandler: ((CGFloat) -> Void)?
+    private var editingDidEndHandler: ((CGFloat) -> Void)?
     private var _value: CGFloat = 0.5
     var value: CGFloat {
         get {
@@ -115,12 +116,18 @@ class BCSlider: UIView {
         valueChangedHandler = handler
     }
     
+    func onEditingDidEnd(_ handler: @escaping (CGFloat) -> Void) {
+        editingDidEndHandler = handler
+    }
+    
     private func pan(_ gesture: UIPanGestureRecognizer) {
         switch gesture.state {
         case .changed:
             value += gesture.translation(in: self).x / (bounds.width - 40)
             gesture.setTranslation(.zero, in: self)
             setNeedsDisplay()
+        case .ended, .cancelled:
+            editingDidEndHandler?(value)
         default:
             break
         }
