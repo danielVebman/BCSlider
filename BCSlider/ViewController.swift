@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             ]
         ))
         text.append(NSAttributedString(
-            string: "is 30 min away by car.\nSet a reminder before?",
+            string: "is 30 min away by car. Set a reminder before?",
             attributes: [
                 .font: UIFont.systemFont(ofSize: 15),
                 .foregroundColor: UIColor.lightGray
@@ -64,12 +64,27 @@ class ViewController: UIViewController {
         alertView.addSubview(noButton)
         
         // Setup constraints
-        alertView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(40)
-            make.trailing.equalToSuperview().inset(40)
-            
-            make.center.equalToSuperview()
-        }
+        
+        // // // START // // //
+        
+        // SnapKit
+        
+//        alertView.snp.contentHuggingHorizontalPriority = .infinity
+//        alertView.snp.makeConstraints { make in
+//            make.center.equalToSuperview()
+//            make.width.lessThanOrEqualToSuperview().inset(80)
+//            make.width.lessThanOrEqualTo(300)
+//        }
+        
+        // AutoLayout
+        
+        alertView.translatesAutoresizingMaskIntoConstraints = false
+        alertView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        alertView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, constant: -80).isActive = true
+        alertView.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
+        
+        // // // END // // //
         
         slider.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(40)
