@@ -125,11 +125,11 @@ class ViewController: UIViewController {
         // // // START // // //
         
         // SnapKit
-        
+
 //        alertView.snp.makeConstraints { make in
 //            make.center.equalToSuperview()
-//            make.width.lessThanOrEqualToSuperview().inset(80)
-//            make.width.lessThanOrEqualTo(300)
+//            make.leading.trailing.equalToSuperview().inset(40).priority(.low)
+//            make.width.lessThanOrEqualTo(300).priority(.high)
 //        }
         
         // AutoLayout
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
         centerYConstraint.constant = -80
         centerYConstraint.isActive = true
         alertView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, constant: -80).isActive = true
-        alertView.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
+        alertView.widthAnchor.constraint(lessThanOrEqualToConstant: 350).isActive = true
         
         // // // END // // //
         

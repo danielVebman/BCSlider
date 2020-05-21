@@ -2,7 +2,7 @@
 
 `BCSlider` is a `UISlider` alternative inspired by [this](https://dribbble.com/shots/3461827-Text-recognition-to-do-app) dribbble. 
 
-![Demo video](https://ucd519c017a88f9ad89adf6e21f7.dl.dropboxusercontent.com/cd/0/inline/A0UwFXl_rymWaf90jRfQspim01doG8ACNp6CUQ73CkBvtGxXy2ROvjt9yA_G2j-wDZ-vO9WfqIv2htkjMqhlLUrcVnR88XuO_ZxcIVtgeIqwv7M0e7X_BbaLjP3Kozf3swg/file#).
+![Demo video](demo.gif).
 
 # How to setup
 
