@@ -6,6 +6,7 @@ target 'BCSlider' do
   use_frameworks!
 
   # Pods for BCSlider
+  pod 'SABlurImageView'
   pod 'SnapKit'
   pod 'Tactile'
 

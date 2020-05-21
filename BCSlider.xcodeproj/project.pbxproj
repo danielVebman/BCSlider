@@ -13,6 +13,7 @@
 		06069EA12423DAB900AA8CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06069EA02423DAB900AA8CA0 /* Assets.xcassets */; };
 		06069EA42423DAB900AA8CA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06069EA22423DAB900AA8CA0 /* LaunchScreen.storyboard */; };
 		06069EAC2423DB4300AA8CA0 /* BCSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06069EAB2423DB4300AA8CA0 /* BCSlider.swift */; };
+		06306CE82454A8B900B78B62 /* BCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06306CE72454A8B900B78B62 /* BCView.swift */; };
 		5F6441262E001372576CFCFC /* Pods_BCSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D102AC600106EB50E0B2A274 /* Pods_BCSlider.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		06069EA32423DAB900AA8CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06069EA52423DAB900AA8CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06069EAB2423DB4300AA8CA0 /* BCSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSlider.swift; sourceTree = "<group>"; };
+		06306CE72454A8B900B78B62 /* BCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCView.swift; sourceTree = "<group>"; };
 		0C4A82B36822A66BFA0C4954 /* Pods-BCSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSlider.debug.xcconfig"; path = "Target Support Files/Pods-BCSlider/Pods-BCSlider.debug.xcconfig"; sourceTree = "<group>"; };
 		D102AC600106EB50E0B2A274 /* Pods_BCSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E914FB547B394EDE74A54D71 /* Pods-BCSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCSlider.release.xcconfig"; path = "Target Support Files/Pods-BCSlider/Pods-BCSlider.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				06069E972423DAB800AA8CA0 /* AppDelegate.swift */,
 				06069E992423DAB800AA8CA0 /* SceneDelegate.swift */,
 				06069E9B2423DAB800AA8CA0 /* ViewController.swift */,
+				06306CE72454A8B900B78B62 /* BCView.swift */,
 				06069EAB2423DB4300AA8CA0 /* BCSlider.swift */,
 				06069EA02423DAB900AA8CA0 /* Assets.xcassets */,
 				06069EA22423DAB900AA8CA0 /* LaunchScreen.storyboard */,
@@ -208,6 +211,7 @@
 				06069E9C2423DAB800AA8CA0 /* ViewController.swift in Sources */,
 				06069EAC2423DB4300AA8CA0 /* BCSlider.swift in Sources */,
 				06069E982423DAB800AA8CA0 /* AppDelegate.swift in Sources */,
+				06306CE82454A8B900B78B62 /* BCView.swift in Sources */,
 				06069E9A2423DAB800AA8CA0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

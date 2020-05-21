@@ -14,8 +14,65 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Setup appearance
         view.backgroundColor = .white
+        
+        // // // BCView // // //
+        
+        // Setup appearance
+        
+        let lockView = BCView()
+        view.addSubview(lockView)
+        
+        let lockImageView = UIImageView(image: UIImage(named: "icon-lock"))
+        lockImageView.tintColor = UIColor(red: 92 / 255, green: 122 / 255, blue: 163 / 255, alpha: 1)
+        lockImageView.contentMode = .scaleAspectFit
+        lockView.contentView.addSubview(lockImageView)
+        
+        let houseView = BCView()
+        view.addSubview(houseView)
+        
+        let houseImageView = UIImageView(image: UIImage(named: "icon-house"))
+        houseImageView.tintColor = UIColor(red: 92 / 255, green: 122 / 255, blue: 163 / 255, alpha: 1)
+        houseImageView.contentMode = .scaleAspectFit
+        houseView.contentView.addSubview(houseImageView)
+        
+        let lightView = BCView()
+        view.addSubview(lightView)
+        
+        let lightImageView = UIImageView(image: UIImage(named: "icon-light"))
+        lightImageView.tintColor = UIColor(red: 92 / 255, green: 122 / 255, blue: 163 / 255, alpha: 1)
+        lightImageView.contentMode = .scaleAspectFit
+        lightView.contentView.addSubview(lightImageView)
+        
+        // Setup constraints
+        
+        lockView.snp.makeConstraints { make in
+            make.size.equalTo(90)
+            make.bottom.equalTo(view.layoutMarginsGuide).inset(20)
+            make.leading.equalToSuperview().offset(20)
+        }
+        
+        houseView.snp.makeConstraints { make in
+            make.size.equalTo(90)
+            make.bottom.equalTo(view.layoutMarginsGuide).inset(20)
+            make.centerX.equalToSuperview()
+        }
+        
+        lightView.snp.makeConstraints { make in
+            make.size.equalTo(90)
+            make.bottom.equalTo(view.layoutMarginsGuide).inset(20)
+            make.trailing.equalToSuperview().inset(20)
+        }
+        
+        for imageView in [lockImageView, houseImageView, lightImageView] {
+            imageView.snp.makeConstraints { make in
+                make.top.bottom.leading.trailing.equalToSuperview().inset(30)
+            }
+        }
+        
+        // // // BCSlider // // //
+        
+        // Setup appearance
         
         let alertView = UIView()
         alertView.backgroundColor = .white
@@ -69,7 +126,6 @@ class ViewController: UIViewController {
         
         // SnapKit
         
-//        alertView.snp.contentHuggingHorizontalPriority = .infinity
 //        alertView.snp.makeConstraints { make in
 //            make.center.equalToSuperview()
 //            make.width.lessThanOrEqualToSuperview().inset(80)
@@ -80,7 +136,9 @@ class ViewController: UIViewController {
         
         alertView.translatesAutoresizingMaskIntoConstraints = false
         alertView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        let centerYConstraint = alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        centerYConstraint.constant = -80
+        centerYConstraint.isActive = true
         alertView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, constant: -80).isActive = true
         alertView.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
         

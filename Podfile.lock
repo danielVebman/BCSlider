@@ -1,20 +1,24 @@
 PODS:
+  - SABlurImageView (5.0.0)
   - SnapKit (5.0.1)
   - Tactile (3.0.1)
 
 DEPENDENCIES:
+  - SABlurImageView
   - SnapKit
   - Tactile
 
 SPEC REPOS:
   trunk:
+    - SABlurImageView
     - SnapKit
     - Tactile
 
 SPEC CHECKSUMS:
+  SABlurImageView: 8640919c27208ada65e279ec17d7428408fedf89
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Tactile: 266a3ddd39e670205de3987ded0414d9206ae300
 
-PODFILE CHECKSUM: 975209cfa264079d5e7229d1bbee86b9a338008b
+PODFILE CHECKSUM: b0e41a084bec67439843a8c01ac38910bf5a1ba7
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
